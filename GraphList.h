@@ -1,15 +1,20 @@
-//
-//  main.c
-//  comp9024
-//
-//  Created by Keqiao.Qian on 29/1/18.
-//  Copyright © 2018 Keqiao.Qian. All rights reserved.
-//
 
-#include <stdio.h>
+#ifndef graphlist_h
+#define graphlist_h
+#include <stdbool.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
-}
+struct Node{
+	int val;
+	struct Node *next;
+};
+
+typedef struct GraphRep *Graph;
+typedef struct EdgeRep *Edge;
+typedef struct Node *Node;
+
+Graph newGraph(int V);
+bool isAdjacent(Graph, Edge);
+bool insertEdge(Graph, Edge);
+bool removeEdge(Graph, Edge);
+void showGraph(Graph);
+#endif
