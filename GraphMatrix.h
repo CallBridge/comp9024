@@ -5,6 +5,7 @@
 
 typedef struct GraphRep *Graph;
 typedef struct EdgeRep *Edge;
+typedef int Vertex;
 
 /* put the code into main() function so you can use adjacent list repr
  
@@ -34,4 +35,5 @@ bool insertEdge(Graph, Edge);
 bool removeEdge(Graph, Edge);
 void showGraph(Graph);
 void freeGraph(Graph);
+Graph kruskalMST(Graph);
 #endif
